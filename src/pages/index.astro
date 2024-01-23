@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import SocialIcon from "../components/icons/SocialIcon.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import ExperiencieJob from "../components/icons/ExperiencieJob.astro";
+import JavaScript from "../components/icons/JavaScript.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+	title="Portfolios de Luis Palacios - Desarrollador web y Analista de sistemas con 1 año de experiencia ."
+	description="Portfolios de Luis Palacios - Desarrollador web y Analista de sistemas con 1 año de experiencia ."
+>
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
+			<img
+				class="rounded-full size-12 mb-4"
+				src="data:image/jpeg;base64,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"
+				alt="lgoo for portfolio"
+			/>
+			<h1
+				class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+			>
+				Hey, soy Luis Palacios <a
+					href="https://linkedin.com/in/midudev"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center hover:scale-105 transition"
+				>
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				<span>+1 Año de experiencia.</span>
+				<span class="text-yellow-200/90">
+					Desarrolador Web y Analista de Sistemas</span
+				>
+				<span class="text-red-200/90"> de Lima, Perú 🇵🇪.</span><span
+					class="opacity-75"
+				>
+					Especializado en crear aplicaciones únicas.
+				</span>
+			</h2>
+
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialIcon
+					href="https://www.linkedin.com/in/luis-palacios-sernaque/"
+				>
+					<LinkedIn class="size-4 md:size-6" />
+					LinkedIn
+				</SocialIcon>
+				<SocialIcon href="https://github.com/PalaciosLuis">
+					<GithubIcon class="size-4 md:size-6" />
+					Github
+				</SocialIcon>
+
+				<SocialIcon>
+					<MailIcon class="size-4 md:size-6" />
+					palaciossernaqueluisjavier@gmail.com
+				</SocialIcon>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2
+				class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+			>
+				<ExperiencieJob class="size-10" />
+				Experiencia laboral
+			</h2>
+
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2
+				class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+			>
+				<JavaScript class="size-10" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>

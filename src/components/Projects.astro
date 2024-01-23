@@ -1,0 +1,94 @@
+---
+import Javascript from "./icons/JavaScript.astro";
+import Html from "./icons/Html.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import Css from "./icons/Css.astro";
+import Java from "./icons/Java.astro";
+import MySQL from "./icons/MySQL.astro";
+
+const TAGS = {
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-white text-yellow-500",
+        icon:Javascript,
+    },
+    HTML: {
+        name: "Html",
+        class: "bg-white text-orange-500",
+        icon:Html,
+    },
+    BOOTSTRAP: {
+        name: "Bootstrap",
+        class: "bg-white text-purple-500",
+        icon:Bootstrap,
+    },
+    CSS: {
+        name: "Css",
+        class: "bg-white text-blue-500",
+        icon:Css,
+    },
+    JAVA: {
+        name: "Java",
+        class: "bg-white text-red-500",
+        icon:Java,
+    },
+    MYSQL: {
+        name: "MySql",
+        class: "bg-white text-blue-500",
+        icon:MySQL,
+    },
+
+};
+
+const PROJECTS = [
+    {
+        title: "Landig Page viva-rentable.com",
+        description:
+            "Proyecto realizado para una empresa de que muestra oportunidades de inveriones en Perú",
+        image: "/projects/proj001.webp",
+        link: "https://www.google.com",
+        tags: [ TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT,TAGS.BOOTSTRAP],
+    },
+    {
+        title: "Landing page Playas de Perú",
+        description:
+            "Proyecto realizado para mejorar mis habilidades en CSS y HTML",
+        image: "/projects/proj002.webp",
+        link: "https://www.google.com",
+        tags: [ TAGS.HTML,TAGS.CSS,TAGS.JAVASCRIPT],
+    },
+    {
+        title: "ArepaJuegos - CRUD de videojuegos",
+        description:
+            "Proyecto del instituto para la materia de programación orientada a objetos",
+        image: "/projects/proj003.webp",
+        link: "https://www.google.com",
+        tags: [ TAGS.HTML,TAGS.CSS,TAGS.JAVA,TAGS.MYSQL,TAGS.BOOTSTRAP],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ image, title, description, tags }) => (
+        <article class="pb-[80px]">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row">
+                {tags.map((tag) => (
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                            <tag.icon class="size-4" />
+                            {tag.name}
+                        </span>
+
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={image}
+                alt={`captura de pantalla del proyecto ${image}`}
+            />
+        </article>
+    ))
+}

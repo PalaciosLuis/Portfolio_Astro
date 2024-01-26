@@ -5,42 +5,68 @@ import Bootstrap from "./icons/Bootstrap.astro";
 import Css from "./icons/Css.astro";
 import Java from "./icons/Java.astro";
 import MySQL from "./icons/MySQL.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import TypeScript from "./icons/TypeScript.astro";
 
 const TAGS = {
+    ASTRO:{
+        name: "Astro",
+        class: "bg-black text-yellow-500",
+        icon:AstroIcon,
+    },
     JAVASCRIPT: {
         name: "JavaScript",
-        class: "bg-white text-yellow-500",
+        class: "bg-black text-yellow-500",
         icon:Javascript,
     },
     HTML: {
         name: "Html",
-        class: "bg-white text-orange-500",
+        class: "bg-black text-orange-500",
         icon:Html,
     },
     BOOTSTRAP: {
         name: "Bootstrap",
-        class: "bg-white text-purple-500",
+        class: "bg-black text-purple-500",
         icon:Bootstrap,
     },
     CSS: {
         name: "Css",
-        class: "bg-white text-blue-500",
+        class: "bg-black text-blue-500",
         icon:Css,
     },
     JAVA: {
         name: "Java",
-        class: "bg-white text-red-500",
+        class: "bg-black text-red-500",
         icon:Java,
     },
     MYSQL: {
         name: "MySql",
-        class: "bg-white text-blue-500",
+        class: "bg-black text-blue-500",
         icon:MySQL,
+    },
+    TAILWIND: {
+        name: "Tailwind",
+        class: "bg-black text-blue-500",
+        icon:Tailwind,
+    },
+    TYPESCRIPT: {
+        name: "TypeScript",
+        class: "bg-black text-blue-500",
+        icon:TypeScript,
     },
 
 };
 
 const PROJECTS = [
+{
+        title: "Clon web de Los Premios Esland",
+        description:
+            "Proyecto realizado con la comunidad de Minidudev",
+        image: "/projects/proj004.webp",
+        link: "https://www.google.com",
+        tags: [ TAGS.ASTRO,TAGS.TYPESCRIPT,TAGS.JAVASCRIPT,TAGS.TAILWIND],
+    },
     {
         title: "Landig Page viva-rentable.com",
         description:
